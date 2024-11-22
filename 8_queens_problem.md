@@ -4,7 +4,7 @@
 The 8 Queens Problem is a classic algorithmic puzzle in computer science and mathematics. The challenge is to place 8 queens on a 8x8 chessboard so that no two queens threaten each other. This means that no two queens can share the same raw, column or diagonal.
 
 ## The Hill Climbing algorithm
-To solve this problem I used a heuristic search algorithm known as "Hill Climbing". In this algorithm, the agent starts from a random state and then iteratively moves toward a successor state that maximizes a given evaluation function until a maximum is found.
+To solve this problem I used a heuristic search algorithm known as "Hill Climbing". In this algorithm, the execution starts from a random state of the problem and then iteratively moves toward a successor state that maximizes a given evaluation function until a maximum is found.
 
 In the 8 Queens Problem, every possible configuration of the 8 queens (with a queen for each column) represents a state and the value to maximize is the negative value of the heuristic function $h(x)$ defined as "the number of queens threatening each other in the state x".
 Given a possible board configuration, every other arrangement that has exactly 1 queen in a different position is a successor of that state. Clearly, our goal is to reach a state $s$ with $h(s)=0$.
