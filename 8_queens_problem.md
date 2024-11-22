@@ -9,7 +9,7 @@ To solve this problem I used a heuristic search algorithm known as "Hill Climbin
 In the 8 Queens Problem, every possible configuration of the 8 queens (with a queen for each column) represents a state and the value to maximize is the negative value of the heuristic function $h(x)$ defined as "the number of queens threatening each other in the state x".
 Given a possible board configuration, every other arrangement that has exactly 1 queen in a different position is a successor of that state. Clearly, our goal is to reach a state $s$ with $h(s)=0$.
 
-One of the main problem that we have to address when implementing this algorithm is the fact that we could get stuck on a local maximum, without reaching a global maximum. For instance, we could reach a configuration $x$ with $h(x)=2$ where all its successors have a worse value of $h(x)$,in that case the algorithm would be unable to find a solution.
+One of the main problems that we have to address when implementing this algorithm is the fact that we could get stuck on a local maximum, without reaching a global maximum. For instance, we could reach a configuration $x$ with $h(x)=2$ where all its successors have a worse value of $h(x)$,in that case the algorithm would be unable to find a solution.
 To face this issue we can use a technique called **random restart**. Specifically, if we encounter a local maximum, we can restart the algorithm from a new random state in the hope of eventually reaching a global maximum.
 
 ## The code
